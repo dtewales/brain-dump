@@ -13,12 +13,12 @@ Most will be native, but things you recall installing yourself are what you're l
     - If your addons have custom config files like dnscrypt, go to **System > Backup / Flash Firmware**
         - Click the Configuration tab
         - Add `/etc/dnscrypt-proxy2/dnscrypt-proxy.toml`
-3. [OpenWRT's site](https://openwrt.org/) has a link to **Download a firmware image for your device (firmware selector)** for the latest release
+3. [OpenWRT's site](https://openwrt.org/) has a link to [**Download a firmware image for your device (firmware selector)**](https://firmware-selector.openwrt.org/) for the latest release
 4. Type in your router identifier
 5. Click **> Customize installed packages and/or first boot script**
 6. Append the following (adjust accordingly for whatever addon packages you use):
     ```bash
-    dnscrypt-proxy2 luci-app-adblock-fast
+    dnscrypt-proxy2 luci-app-adblock-fast gawk grep sed coreutils-sort luci-ssl
     ```
 
     - If you're using dnscrypt, you'll want to setup the following commands for a custom script; under **Script to run on first boot (uci-defaults)**
